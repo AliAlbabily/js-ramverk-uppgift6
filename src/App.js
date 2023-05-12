@@ -17,7 +17,7 @@ function MovieApplication() {
     <div className="App">
       <AddMovieForm addMovie={addMovie} />
 
-      <Movies></Movies>
+      <Movies movies={movies} />
 
       <OrderByAlphaButton />
       <OrderByGradeButton />

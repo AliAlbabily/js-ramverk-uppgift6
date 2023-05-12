@@ -5,11 +5,8 @@ import imageStar from './images/star.png';
 
 function Movie({ movie }) {
     return (
-        // <li data-grade="${movie.grade}" data-title="${movie.title}">
-        //     {movie.title} - Grade: {movie.grade}
-        // </li>
         <li>
-            test data
+            {movie.title}
             <img src={imageDelete} alt="Delete movie" className="delete-movie-icon" />
             <img src={imageStar} alt="Delete movie" />
         </li>

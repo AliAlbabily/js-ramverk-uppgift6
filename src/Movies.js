@@ -7,13 +7,9 @@ function Movies({ movies }) {
         <div>
             <h1>Inlagda filmer</h1>
             <ul id="movie-list">
-                {/* {movies.map((movie, index) => (
-                        <Movie key={index} movie={movie} />
-                    ))} */}
-
-                <Movie />
-                <Movie />
-                <Movie />
+                {movies.map((movie, index) => (
+                    <Movie key={index} movie={movie} />
+                ))}
             </ul>
         </div>
     );
