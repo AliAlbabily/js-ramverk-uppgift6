@@ -12,12 +12,18 @@ function AddMovieForm() {
         const title = titleRef.current.value;
         const grade = gradeRef.current.value;
 
-        // Log the form values
-        console.log('Submitted Title:', title);
-        console.log('Submitted Grade:', grade);
+        if (!title || grade === "0") {
+            alert("Du måste ange både titel & betyg för att kunna spara filmen!");
+        }
+        else {
+            // Log the form values
+            console.log('Submitted Title:', title);
+            console.log('Submitted Grade:', grade);
+            
+            // Clear the form after submission
+            event.target.reset();
+        }
 
-        // Clear the form after submission (optional)
-        event.target.reset();
     };
 
     return (
