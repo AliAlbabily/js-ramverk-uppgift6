@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-function AddMovieForm() {
+function AddMovieForm({ addMovie }) {
     const titleRef = useRef(null);
     const gradeRef = useRef(null);
 
@@ -19,6 +19,8 @@ function AddMovieForm() {
             // Log the form values
             console.log('Submitted Title:', title);
             console.log('Submitted Grade:', grade);
+
+            addMovie(title, grade);
             
             // Clear the form after submission
             event.target.reset();
