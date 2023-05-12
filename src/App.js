@@ -13,11 +13,17 @@ function MovieApplication() {
     setMovies([...movies, newMovie]); // create a new array with the existing movies and the new movie object
   };
 
+  const removeMovie = (title) => {
+    const updatedMovies = movies.filter((movie) => movie.title !== title);
+    setMovies(updatedMovies);
+    console.table(updatedMovies);
+  };
+
   return (
     <div className="App">
       <AddMovieForm addMovie={addMovie} />
 
-      <Movies movies={movies} />
+      <Movies movies={movies} removeMovie={removeMovie} />
 
       <OrderByAlphaButton />
       <OrderByGradeButton />
