@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function AddMovieForm() {
     return (
         <form id="new-movie-form">
             <fieldset>
-                <legend>Lägg till en film</legend>
+                <h1>Lägg till en film</h1>
                 <div className="form-group">
                     <label htmlFor="title">Titel:</label>
                     <input type="text" className="form-control" id="title" placeholder="Titel här..." />

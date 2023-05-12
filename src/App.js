@@ -6,7 +6,7 @@ function MovieApplication() {
   return (
     <div className="App">
       <AddMovieForm />
-      <h1>hahahahahaha</h1>
+
     </div>
   );
 }
