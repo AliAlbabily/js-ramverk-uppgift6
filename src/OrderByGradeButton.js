@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-function OrderByGradeButton() {
+function OrderByGradeButton({ onClick }) {
     return(
-        <button id="order-grade" className="btn btn-primary">Betygsordning</button>
+        <button id="order-grade" className="btn btn-primary" onClick={onClick}>Betygsordning</button>
     )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-function OrderByAlphaButton() {
+function OrderByAlphaButton({ onClick }) {
     return(
-        <button id="order-alphabetic" className="btn btn-primary">Alfabetisk ordning</button>
+        <button id="order-alphabetic" className="btn btn-primary" onClick={onClick}>Alfabetisk ordning</button>
     )
 }
 

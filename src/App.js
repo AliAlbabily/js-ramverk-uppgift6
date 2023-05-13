@@ -14,9 +14,20 @@ function MovieApplication() {
   };
 
   const removeMovie = (title) => {
-    const updatedMovies = movies.filter((movie) => movie.title !== title);
+    const updatedMovies = movies.filter((movie) => movie.title !== title); // get a list of movies excluding the one that doesn't meet the condition
     setMovies(updatedMovies);
     console.table(updatedMovies);
+  };
+
+  const sortMovies = (sortByValue) => {
+    let sortedMovies;
+    if (sortByValue === "title") {
+      sortedMovies = [...movies].sort( (a, b) => a[sortByValue].localeCompare(b[sortByValue]) ); // sort movies in an alphabetic order
+    } 
+    else if (sortByValue === "grade") {
+      sortedMovies = [...movies].sort( (a, b) => Number(b[sortByValue]) - Number(a[sortByValue]) ); // sort numbers in a descending order
+    }
+    setMovies(sortedMovies);
   };
 
   return (
@@ -25,8 +36,8 @@ function MovieApplication() {
 
       <Movies movies={movies} removeMovie={removeMovie} />
 
-      <OrderByAlphaButton />
-      <OrderByGradeButton />
+      <OrderByAlphaButton onClick={() => sortMovies('title')} />
+      <OrderByGradeButton onClick={() => sortMovies('grade')} />
     </div>
   );
 }
